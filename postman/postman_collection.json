@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "f8eefff5-8ce2-4691-9789-c16ca23617b4",
+		"name": "Todo List App | ABP Prod",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Activity",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Activity 1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "developer-berduka.my.id:8888/api/activity-groups",
+							"host": [
+								"developer-berduka",
+								"my",
+								"id"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"activity-groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"21.11.4435\",\n    \"email\": \"syahidnurrohim@students.amikom.ac.id\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "developer-berduka.my.id:8888/api/activity-groups/1",
+							"host": [
+								"developer-berduka",
+								"my",
+								"id"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"activity-groups",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "developer-berduka.my.id:8888/api/activity-groups",
+							"host": [
+								"developer-berduka",
+								"my",
+								"id"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"activity-groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "developer-berduka.my.id:8888/api/activity-groups/1",
+							"host": [
+								"developer-berduka",
+								"my",
+								"id"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"activity-groups",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "developer-berduka.my.id:8888/api/activity-groups/1",
+							"host": [
+								"developer-berduka",
+								"my",
+								"id"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"activity-groups",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Todo",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Todo 1\",\n    \"activity_group_id\": \"1\",\n    \"is_active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "developer-berduka.my.id:8888/api/todo-items",
+							"host": [
+								"developer-berduka",
+								"my",
+								"id"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"todo-items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Todo U\",\n    \"activity_group_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "developer-berduka.my.id:8888/api/todo-items/1",
+							"host": [
+								"developer-berduka",
+								"my",
+								"id"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"todo-items",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "developer-berduka.my.id:8888/api/todo-items?activity_group_id=1",
+							"host": [
+								"developer-berduka",
+								"my",
+								"id"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"todo-items"
+							],
+							"query": [
+								{
+									"key": "activity_group_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"ok\",\n    \"activity_group_id\": -10,\n    \"is_active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "developer-berduka.my.id:8888/api/todo-items/1",
+							"host": [
+								"developer-berduka",
+								"my",
+								"id"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"todo-items",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "developer-berduka.my.id:8888/api/todo-items/1",
+							"host": [
+								"developer-berduka",
+								"my",
+								"id"
+							],
+							"port": "8888",
+							"path": [
+								"api",
+								"todo-items",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
