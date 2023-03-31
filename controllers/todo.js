@@ -73,7 +73,7 @@ async function createTodo(req, res) {
       priority: req.body.priority || 'very-high'
     })
 
-    return res.json({
+    return res.status(201).json({
       status: "Success",
       message: "Success",
       data: todo
